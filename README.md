@@ -5,4 +5,4 @@
 ## Links
 
 - Live Site [URL](https://mhmd-tarek-mhmd.github.io/Stats-card-component)
-- Solution [URL](https://www.frontendmentor.io/solutions/stats-card-)
+- Solution [URL](frontendmentor.io/solutions/stats-card-VwIcgn0SWi)
