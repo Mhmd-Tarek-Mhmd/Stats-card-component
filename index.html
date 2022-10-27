@@ -5,6 +5,151 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stats card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+    />
+    <style>
+      :root {
+        --violet: hsl(277, 64%, 61%);
+
+        --body-bg: hsl(233, 47%, 7%);
+        --card-bg: hsl(244, 38%, 16%);
+
+        --heading-cl: hsl(0, 0%, 100%);
+        --base-cl: hsla(0, 0%, 100%, 0.75);
+        --stats-cl: hsla(0, 0%, 100%, 0.6);
+
+        --base-font: "Inter", sans-serif;
+        --stats-font: "Lexend Deca", sans-serif;
+      }
+
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      ul {
+        list-style: none;
+      }
+
+      /* Base */
+      body {
+        display: grid;
+        height: 100vh;
+        min-height: 980px;
+        place-items: center;
+        color: var(--base-cl);
+        background-color: var(--body-bg);
+        font: 40 15px/1 var(--base-font);
+      }
+      @media (min-width: 1200px) {
+        body {
+          min-height: 550px;
+        }
+      }
+
+      /* Utilities */
+      .title {
+        color: var(--heading-cl);
+      }
+
+      /*
+        Component style
+      */
+
+      .card {
+        display: grid;
+        overflow: hidden;
+        border-radius: 6px;
+        text-align: center;
+        grid-template-columns: 327px;
+        grid-template-rows: 240px 540px;
+        background-color: var(--card-bg);
+      }
+      @media (min-width: 1200px) {
+        .card {
+          text-align: left;
+          grid-template-rows: 446px;
+          grid-template-columns: 570px 540px;
+        }
+      }
+
+      /* BG */
+      .bg {
+        position: relative;
+        background-size: 100% 100%;
+        background-image: url(images/image-header-mobile.jpg);
+      }
+      .bg::before {
+        inset: 0;
+        content: "";
+        position: absolute;
+        background-color: rgb(112 7 173 / 60%);
+      }
+      @media (min-width: 1200px) {
+        .bg {
+          order: 1;
+          background-image: url(images/image-header-desktop.jpg);
+        }
+      }
+
+      /* Intro */
+      .intro {
+        padding-top: 40px;
+        padding-inline: 35px;
+      }
+      .intro .title {
+        line-height: 1.2;
+        font-size: 1.73rem;
+      }
+      .intro .title span {
+        color: var(--violet);
+      }
+      .intro .txt {
+        line-height: 1.6;
+        margin-block: 15px 30px;
+      }
+      @media (min-width: 1200px) {
+        .intro {
+          padding-top: 72px;
+          padding-inline: 72px 0;
+        }
+        .intro .title {
+          font-size: 2.272rem;
+        }
+        .intro .txt {
+          line-height: 1.5;
+          font-size: 1.21rem;
+          margin-block: 25px 73px;
+        }
+      }
+
+      /* Stats */
+      .stats {
+        display: grid;
+        row-gap: 30px;
+      }
+      .stats .title {
+        display: block;
+        font-size: 1.45rem;
+        margin-bottom: 5px;
+      }
+      .stats .subtitle {
+        color: var(--stats-cl);
+        text-transform: uppercase;
+        font-family: var(--stats-font);
+      }
+      @media (min-width: 1200px) {
+        .stats {
+          display: flex;
+          column-gap: 64px;
+        }
+      }
+    </style>
   </head>
   <body>
     <main>
